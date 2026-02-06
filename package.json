@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "deploy": "gh-pages -d dist"
+    
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

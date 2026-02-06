@@ -47,14 +47,25 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <a
+            {/* <a
               href="/resume/prafull_sharma.pdf"
               download="Prafull_Sharma_Resume.pdf"
               className="btn-primary text-sm"
             >
               <Download className="w-4 h-4" />
               Resume
+            </a> */}
+
+
+            <a
+              href="./resume/prafull_sharma.pdf"
+              download="Prafull_Sharma_Resume.pdf"
+              className="btn-primary text-sm"
+            >
+              <Download className="w-4 h-4" />
+              Resume
             </a>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,14 +93,24 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4 pt-2">
-                <a
+                {/* <a
                   href="/resume/prafull_sharma.pdf"
                   download="Prafull_Sharma_Resume.pdf"
                   className="btn-primary text-sm w-full"
                 >
                   <Download className="w-4 h-4" />
                   Download Resume
+                </a> */}
+
+                <a
+                  href="./resume/prafull_sharma.pdf"
+                  download="Prafull_Sharma_Resume.pdf"
+                  className="btn-primary text-sm w-full"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
                 </a>
+
               </div>
             </div>
           </div>
