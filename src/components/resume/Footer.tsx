@@ -1,4 +1,6 @@
 import { Heart, Code } from 'lucide-react';
+import { FaReact } from "react-icons/fa";
+import { SiCloudflare } from "react-icons/si";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,12 +15,21 @@ const Footer = () => {
           </div>
 
           {/* Center - Made with */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Built with</span>
-            <Heart className="w-4 h-4 text-destructive fill-current" />
-            <span>&</span>
-            <Code className="w-4 h-4 text-primary" />
-          </div>
+      <div className="flex items-center gap-3 text-sm text-muted-foreground">
+  <span>Built with</span>
+
+  <div className="flex items-center gap-1 font-medium">
+    <FaReact className="text-blue-500" />
+    <span>React</span>
+  </div>
+
+  <span>• Hosted on</span>
+
+  <div className="flex items-center gap-1 font-medium">
+    <SiCloudflare className="text-orange-500" />
+    <span>Cloudflare</span>
+  </div>
+</div>
 
           {/* Right - Quick Links */}
           <div className="flex items-center gap-4">
