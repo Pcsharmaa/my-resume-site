@@ -1,35 +1,70 @@
-import { Code, Database, Globe, Settings, Layers, Shield } from 'lucide-react';
+import { Code, Database, Globe, Settings, Layers, Shield } from "lucide-react";
 
 const skillCategories = [
   {
-    title: 'Backend Technologies',
+    title: "Backend Technologies",
     icon: Code,
-    skills: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Web API', 'REST Services', 'ASP.NET Web Forms'],
+    skills: [
+      { name: "C#", url: "https://learn.microsoft.com/dotnet/csharp/" },
+      { name: "ASP.NET MVC", url: "https://learn.microsoft.com/aspnet/mvc" },
+      { name: "ASP.NET Core", url: "https://learn.microsoft.com/aspnet/core" },
+      { name: "Web API", url: "https://learn.microsoft.com/aspnet/web-api/" },
+      { name: "REST Services", url: "https://restfulapi.net/" },
+      { name: "ASP.NET Web Forms", url: "https://learn.microsoft.com/aspnet/web-forms/" },
+    ],
   },
   {
-    title: 'Frontend Technologies',
+    title: "Frontend Technologies",
     icon: Globe,
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'AJAX', 'React'],
+    skills: [
+      { name: "HTML5", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+      { name: "CSS3", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { name: "jQuery", url: "https://jquery.com/" },
+      { name: "AJAX", url: "https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX" },
+      { name: "React", url: "https://react.dev/" },
+    ],
   },
   {
-    title: 'Database & Tools',
+    title: "Database & Tools",
     icon: Database,
-    skills: ['SQL Server', 'SSMS', 'Database Design', 'Query Optimization'],
+    skills: [
+      { name: "SQL Server", url: "https://www.microsoft.com/sql-server" },
+      { name: "SSMS", url: "https://learn.microsoft.com/sql/ssms/" },
+      { name: "Database Design", url: "https://www.geeksforgeeks.org/database-design/" },
+      { name: "Query Optimization", url: "https://learn.microsoft.com/sql/relational-databases/performance/" },
+    ],
   },
   {
-    title: 'Development Practices',
+    title: "Development Practices",
     icon: Layers,
-    skills: ['OOPS', 'SDLC', 'Agile Methodology', 'Jira', 'Scrum'],
+    skills: [
+      { name: "OOPS", url: "https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/" },
+      { name: "SDLC", url: "https://www.tutorialspoint.com/sdlc/index.htm" },
+      { name: "Agile Methodology", url: "https://www.agilealliance.org/agile101/" },
+      { name: "Jira", url: "https://www.atlassian.com/software/jira" },
+      { name: "Scrum", url: "https://www.scrum.org/resources/what-is-scrum" },
+    ],
   },
   {
-    title: 'Additional Skills',
+    title: "Additional Skills",
     icon: Settings,
-    skills: ['Version Control (Git)', 'Deployment', 'CI/CD', 'AI Prompt Engineering'],
+    skills: [
+      { name: "Version Control (Git)", url: "https://git-scm.com/" },
+      { name: "Deployment", url: "https://www.redhat.com/en/topics/devops/what-is-deployment" },
+      { name: "CI/CD", url: "https://www.redhat.com/en/topics/devops/what-is-ci-cd" },
+      { name: "AI Prompt Engineering", url: "https://www.promptingguide.ai/" },
+    ],
   },
   {
-    title: 'Security',
+    title: "Security",
     icon: Shield,
-    skills: ['API Security', 'Authentication', 'Authorization', 'Secure Application Design'],
+    skills: [
+      { name: "API Security", url: "https://owasp.org/www-project-api-security/" },
+      { name: "Authentication", url: "https://auth0.com/learn/authentication/" },
+      { name: "Authorization", url: "https://auth0.com/docs/get-started/identity-fundamentals/authorization" },
+      { name: "Secure Application Design", url: "https://owasp.org/www-project-top-ten/" },
+    ],
   },
 ];
 
@@ -59,11 +94,18 @@ const Skills = () => {
                 </div>
                 <h3 className="font-semibold text-foreground">{category.title}</h3>
               </div>
+
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span key={skill} className="skill-badge">
-                    {skill}
-                  </span>
+                  <a
+                    key={skill.name}
+                    href={skill.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="skill-badge hover:scale-105 hover:bg-primary hover:text-white transition duration-300 cursor-pointer"
+                  >
+                    {skill.name}
+                  </a>
                 ))}
               </div>
             </div>
