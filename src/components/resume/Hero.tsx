@@ -33,7 +33,7 @@ const Hero = () => {
 
         {/* Experience */}
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-          5.5+ years of hands-on experience in designing, developing, and deploying
+          5.8+ years of hands-on experience in designing, developing, and deploying
           scalable web applications using ASP.NET Core, Web API, SQL Server, and React.
         </p>
 
