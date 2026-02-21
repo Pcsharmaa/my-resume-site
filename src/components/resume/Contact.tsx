@@ -45,12 +45,14 @@ const Contact = () => {
             </a>
 
             {/* LinkedIn */}
+          
             <a
-              href="https://linkedin.com/in/prafull-sharma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-gradient p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group text-center"
-            >
+            href="https://www.linkedin.com/in/prafull-sharma-0222b71a5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-gradient p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group text-center"
+          >
+
               <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
                 <Linkedin className="w-6 h-6 text-primary" />
               </div>
